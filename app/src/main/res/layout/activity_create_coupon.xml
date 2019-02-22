@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CreateCoupon">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FFFFFF"
+        android:elevation="1dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Create Coupon"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:typeface="monospace"
+            android:layout_centerHorizontal="true"
+            android:textSize="15sp"
+            />
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/linear_layout"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp">
+
+                <!-- Spinner Element -->
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:spinnerMode="dialog"
+                    />
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/newCouponCodeEditText"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="Coupon code"
+                android:textSize="12sp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="20dp"
+                android:background="@drawable/linear_layout_in_activity_first_run_second_background"/>
+
+            <EditText
+                android:id="@+id/couponDescriptionEditText"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="Coupon description"
+                android:textSize="12sp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="20dp"
+                android:background="@drawable/linear_layout_in_activity_first_run_second_background"/>
+
+            <EditText
+                android:id="@+id/discountEditText"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="Discount in percent"
+                android:textSize="12sp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="20dp"
+
+                android:paddingLeft="20dp"
+                android:background="@drawable/linear_layout_in_activity_first_run_second_background"/>
+
+            <EditText
+                android:id="@+id/applicableNameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="Room Name (Type All , if applicable to all rooms)"
+                android:textSize="12sp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="20dp"
+                android:background="@drawable/linear_layout_in_activity_first_run_second_background"/>
+
+            <EditText
+                android:id="@+id/maxTimesEditText"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="Max. number of times a user can use the coupon"
+                android:textSize="12sp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="20dp"
+                android:background="@drawable/linear_layout_in_activity_first_run_second_background"/>
+
+            <Button
+                android:id="@+id/btn_one_tap_login"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/button_background"
+                android:backgroundTint="#2196F3"
+                android:onClick="createCouponButton"
+                android:paddingLeft="80dp"
+                android:paddingRight="80dp"
+                android:text="     CREATE COUPON"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.architectica.kangaroorooms.theadminapp">
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@drawable/logo1"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".LauncherActivity"
+            android:theme="@style/noAnimTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".VehiclesList"
+            android:theme="@style/FirstRumTheme" />
+        <activity
+            android:name=".UsersList"
+            android:theme="@style/FirstRumTheme" />
+        <activity
+            android:name=".VendorsList"
+            android:theme="@style/FirstRumTheme" />
+        <activity
+            android:name=".VerifyVendors"
+            android:theme="@style/FirstRumTheme" />
+        <activity
+            android:name=".PendingVendorsList"
+            android:theme="@style/FirstRumTheme" />
+        <activity
+            android:name=".CitiesList"
+            android:theme="@style/FirstRumTheme" />
+        <activity
+            android:name=".UserListings"
+            android:theme="@style/FirstRumTheme" />
+        <activity
+            android:name=".UserBookings"
+            android:theme="@style/FirstRumTheme" />
+        <activity
+            android:name=".VendorListings"
+            android:theme="@style/FirstRumTheme" />
+        <activity
+            android:name=".VendorBookings"
+            android:theme="@style/FirstRumTheme" />
+        <activity
+            android:name=".HotelActivity_1"
+            android:theme="@style/FirstRumTheme" />
+        <activity
+            android:name=".MainActivity"
+            android:label=""
+            android:theme="@style/FirstRumTheme" />
+        <activity
+            android:name=".createAdminActivity"
+            android:theme="@style/FirstRumTheme" />
+        <activity
+            android:name=".ChangePasswordActivity"
+            android:theme="@style/FirstRumTheme" />
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/FirstRumTheme" />
+        <activity
+            android:name=".EditActivity"
+            android:theme="@style/FirstRumTheme" />
+        <activity
+            android:name=".TodaysBookings"
+            android:theme="@style/FirstRumTheme" />
+        <activity
+            android:name=".CreateCoupon"
+            android:theme="@style/FirstRumTheme" />
+        <activity
+            android:name=".CouponsActivity"
+            android:theme="@style/FirstRumTheme" />
+        <activity android:name=".VerifyRooms"
+            android:theme="@style/FirstRumTheme"/>
+    </application>
+
+</manifest>

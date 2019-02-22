@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="false"
+    android:orientation="vertical"
+    tools:context=".EditActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/first_run_third_activity"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        tools:context="com.architectica.kangaroorooms.thevendorsapp.UploadVehicleActivity">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#FFFFFF"
+            android:elevation="1dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:text="Room Information"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:typeface="monospace" />
+        </android.support.v7.widget.Toolbar>
+
+        <EditText
+            android:id="@+id/vehicleName"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Room Description"
+            android:textSize="12sp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="30dp"
+            android:paddingLeft="20dp"
+            android:drawableLeft="@drawable/ic_directions_bike_black_24dp"
+            android:drawablePadding="20dp"
+            android:background="@drawable/linear_layout_in_activity_first_run_second_background"/>
+
+        <EditText
+            android:id="@+id/vendorName"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Landlord Name"
+            android:textSize="12sp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="15dp"
+            android:paddingLeft="20dp"
+            android:drawableLeft="@drawable/ic_person_outline_black_24dp"
+            android:drawablePadding="20dp"
+            android:background="@drawable/linear_layout_in_activity_first_run_second_background"/>
+
+        <EditText
+            android:id="@+id/noOfVehicles"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="No of Rooms"
+            android:textSize="12sp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="15dp"
+            android:paddingLeft="20dp"
+            android:drawableLeft="@drawable/ic_directions_bike_black_24dp"
+            android:drawablePadding="20dp"
+            android:background="@drawable/linear_layout_in_activity_first_run_second_background"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/vehicleNoLayout"
+            android:gravity="center_horizontal">
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/pricePerHour"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Available From"
+            android:textSize="12sp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="15dp"
+            android:paddingLeft="20dp"
+            android:drawableLeft="@drawable/ic_person_outline_black_24dp"
+            android:drawablePadding="20dp"
+            android:background="@drawable/linear_layout_in_activity_first_run_second_background"/>
+
+        <EditText
+            android:id="@+id/pricePerDay"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Price Per Month"
+            android:textSize="12sp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="15dp"
+            android:paddingLeft="20dp"
+            android:drawableLeft="@drawable/ic_person_outline_black_24dp"
+            android:drawablePadding="20dp"
+            android:background="@drawable/linear_layout_in_activity_first_run_second_background"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp">
+
+            <EditText
+                android:id="@+id/parkingAddress"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/linear_layout_in_activity_first_run_second_background"
+                android:drawableLeft="@drawable/ic_location_city_black_24dp"
+                android:drawablePadding="20dp"
+                android:hint="Room Address"
+                android:paddingLeft="20dp"
+                android:textSize="12sp" />
+<!--
+            <ImageView
+                android:id="@+id/location_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:onClick="markLocation"
+                android:src="@drawable/ic_add_location_black_24dp" />
+
+                -->
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <ImageView
+                android:id="@+id/vehicleImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/room"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Main pic"
+                android:layout_alignParentRight="true"
+                android:layout_margin="10dp"/>
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/images_recycler_view"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_background"
+            android:backgroundTint="#4CAF50"
+            android:onClick="updateDetails"
+            android:text="UPDATE DETAILS"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+</ScrollView>
