@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     String welcomeMessage;
 
     String[] iconNames = {"Rooms","Users","Landlords","Verify Landlords","Verify Rooms","Create Coupon"};
-    int[] iconImages = {R.drawable.vehicleicon,R.drawable.profile,R.drawable.profile,R.drawable.profile,R.drawable.vehicleicon,R.drawable.bookingicon};
+    int[] iconImages = {R.drawable.ic_location_city_black_24dp,R.drawable.profile,R.drawable.profile,R.drawable.profile,R.drawable.ic_add_location_black_24dp,R.drawable.bookingicon};
 
 
     @Override
