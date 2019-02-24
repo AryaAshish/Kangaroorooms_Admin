@@ -1,6 +1,7 @@
 package com.architectica.kangaroorooms.theadminapp;
 
 import android.app.ProgressDialog;
+import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -60,10 +61,25 @@ public class VerifyVendors extends AppCompatActivity {
                     @Override
                     public void onSuccess() {
 
-                        pd.dismiss();
+                        if (Build.VERSION.SDK_INT<17){
+
+                            if (VerifyVendors.this.isFinishing()) { // or call isFinishing() if min sdk version < 17
+                                return;
+                            }
+
+                            pd.dismiss();
+
+                        }
+                        else {
+
+                            if (VerifyVendors.this.isDestroyed()) { // or call isFinishing() if min sdk version < 17
+                                return;
+                            }
+
+                            pd.dismiss();
+                        }
 
                     }
-
                     @Override
                     public void onError(Exception e) {
 
@@ -79,7 +95,13 @@ public class VerifyVendors extends AppCompatActivity {
             }
         });
 
+    }
 
+    @Override
+    protected void onDestroy() {
+
+        pd.dismiss();
+        super.onDestroy();
     }
 
     public void verifyButton(View view){

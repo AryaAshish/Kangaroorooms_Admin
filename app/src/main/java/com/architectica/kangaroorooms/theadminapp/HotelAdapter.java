@@ -176,8 +176,17 @@ public class HotelAdapter extends RecyclerView.Adapter<HotelAdapter.HotelItemVie
             //current vehicle is not booked
             //give the option to delete the vehicle
 
-            holder.favouriteSymbol.setVisibility(View.VISIBLE);
-            holder.favouriteSymbol.setImageResource(mCurrentDelete);
+            if (LoginActivity.isMainAdmin == true){
+
+                holder.favouriteSymbol.setVisibility(View.VISIBLE);
+                holder.favouriteSymbol.setImageResource(mCurrentDelete);
+
+            }
+            else {
+
+                //dont give the delete option for subadmins
+
+            }
 
             holder.blockSymbol.setVisibility(View.VISIBLE);
             //holder.blockSymbol.setImageResource(mCurrentBlock);
